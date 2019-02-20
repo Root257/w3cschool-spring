@@ -11,10 +11,8 @@ public class MainApp {
     public static void main(String[] args){
 
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        context.start();
-        HelloWorld helloWorld = (HelloWorld) context.getBean("helloWorld");
-        helloWorld.getMessage();
-        context.stop();
+        CustomEventPublisher cvp= (CustomEventPublisher)context.getBean("customEventPublisher");
+        cvp.publish();
 //        TextEditor textEditor = context.getBean(TextEditor.class);
 //        textEditor.spellCheck();
       //  context.registerShutdownHook();

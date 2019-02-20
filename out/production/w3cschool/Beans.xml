@@ -14,5 +14,7 @@
 
     <bean id="cStopEventHandler"
           class="com.w3cschool.CStopEventHandler"/>
+    <bean id="customEventHandle" class="com.w3cschool.CustomEventHandle"></bean>
+    <bean id="customEventPublisher" class="com.w3cschool.CustomEventPublisher"></bean>
 
 </beans>
