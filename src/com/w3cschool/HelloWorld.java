@@ -1,5 +1,5 @@
 package com.w3cschool;
-
+import javax.annotation.*;
 public class HelloWorld {
     private String message1;
     private String message2;
@@ -20,10 +20,19 @@ public class HelloWorld {
     {
         System.out.println("Your Message:"+message2);
     }
-    public void init(){
+    public void init1(){
         System.out.println("Bean is going through init.");
     }
-    public void destroy(){
+    public void destroy1(){
         System.out.println("Bean will destroy now.");
+    }
+
+    @PostConstruct
+    public void init(){
+        System.out.println("Bean is going through init PostConstruct .");
+    }
+    @PreDestroy
+    public void destroy(){
+        System.out.println("Bean will destroy now PreDestroy");
     }
 }

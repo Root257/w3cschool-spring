@@ -1,20 +1,22 @@
 package com.w3cschool;
 
-import com.sun.org.apache.bcel.internal.generic.RETURN;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class TextEditor {
     private String message1;
+
     private SpellChecker spellChecker;
 
-    public  void  setSpellChecker(SpellChecker spellChecker){
-        System.out.println("Inside setSpellChecker");
-        this.spellChecker = spellChecker;
-    }
-//    public TextEditor(SpellChecker spellChecker){
-//        System.out.println(this.spellChecker);
-//        System.out.println("Inside TextEditor constructor.");
+
+//    public  void  setSpellChecker(SpellChecker spellChecker){
+//        System.out.println("Inside setSpellChecker");
 //        this.spellChecker = spellChecker;
 //    }
+    //@Autowired
+    public TextEditor(SpellChecker spellChecker){
+        System.out.println("Inside TextEditor constructor." );
+        this.spellChecker = spellChecker;
+    }
     public void setMessage1(String message)
     {
         this.message1 = message;
